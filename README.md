@@ -1,9 +1,6 @@
 
 # MTF Satellite data API
 
-* [Endpoints](#endpoints)
-* [Examples](#examples)
-
 This documentation describes how to use the satellite data REST API designed for MTF.
 
 TODO: describe the data source
