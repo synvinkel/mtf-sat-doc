@@ -97,13 +97,15 @@ The url provided in the timeseries result will process and return the requested 
 
 ## Options
 
-You can set `visualize` to either `rgb` or `falsecolor`... TODO: better wording
+You can set `visualize` to either `rgb` or `falsecolor`... **TODO**: better wording / expand / explain
 
 ```
 https://mtf-sat.synvinkel.org/image/18.30005/57.63845/20180613T101019_20180613T101424_T33VXD.png
 ```
+![rgb visualization](images/20180628T101031_20180628T101358_T33VXD.png)
 ```
 https://mtf-sat.synvinkel.org/image/18.30005/57.63845/20180613T101019_20180613T101424_T33VXD.png?visualize=falsecolor
 ```
+![false color visualization](images/20180628T101031_20180628T101358_T33VXD_falsecolor.png)
 
 
