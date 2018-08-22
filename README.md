@@ -1,7 +1,7 @@
 
 # MTF Satellite data API
 
-This documentation describes how to use the satellite data REST API designed for MTF.
+This documentation describes how to use the satellite data API designed for MTF.
 
 TODO: describe the data source
 
