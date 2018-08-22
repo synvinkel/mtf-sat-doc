@@ -7,7 +7,7 @@ TODO: describe the data source
 
 # API
 
-The API is available at `https://mtf-satellite.synvinkel.org/timeseries/`.
+The API is available at `https://mtf-sat.synvinkel.org/timeseries/`.
 
 ## Response
 
@@ -49,7 +49,7 @@ Requests that fail for one reason or another will return
 A timeseries for a specific location can be requested by adding the `lng` and `lat` query parameters:
 
 ```
-https://mtf-satellite.synvinkel.org/timeseries?lng=106.18&lat=53.98
+https://mtf-sat.synvinkel.org/timeseries?lng=106.18&lat=53.98
 ```
 
 ## By placename
@@ -57,7 +57,7 @@ https://mtf-satellite.synvinkel.org/timeseries?lng=106.18&lat=53.98
 Requesting by placename can be done with `/timeseries/{name}`
 
 ```
-https://mtf-satellite.synvinkel.org/timeseries/{name}
+https://mtf-sat.synvinkel.org/timeseries/{name}
 ```
 
 ## Options
@@ -69,7 +69,7 @@ Options can be appended to the endpoints described above to narrow down the resu
 Use `maxCloudCover` to filter by cloud cover percentage. Must be a number between 0 and 100.
 
 ```
-https://mtf-satellite.synvinkel.org/timeseries/{name}?maxCloudCover=50
+https://mtf-sat.synvinkel.org/timeseries/{name}?maxCloudCover=50
 ```
 
 ### fromDate, startDate
@@ -77,7 +77,7 @@ https://mtf-satellite.synvinkel.org/timeseries/{name}?maxCloudCover=50
 Filtering by a specific date range is done by providing `startDate` and `endDate` in YYYY-MM-DD format (e.g. 2018-01-31) 
 
 ```
-https://mtf-satellite.synvinkel.org/timeseries/{name}?startDate=2018-06-01&endDate=2018-07-23
+https://mtf-sat.synvinkel.org/timeseries/{name}?startDate=2018-06-01&endDate=2018-07-23
 ```
 
 ### season
@@ -85,7 +85,7 @@ https://mtf-satellite.synvinkel.org/timeseries/{name}?startDate=2018-06-01&endDa
 To only include images taken during a certain season you can provide `spring`,`summer`,`fall` or `winter` for the `season` query parameter. Season is defined in a very much northensperocentric manner.
 
 ```
-https://mtf-satellite.synvinkel.org/timeseries/{name}?season=winter
+https://mtf-sat.synvinkel.org/timeseries/{name}?season=winter
 ```
 
 # Images
