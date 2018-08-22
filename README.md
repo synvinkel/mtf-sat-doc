@@ -82,7 +82,7 @@ https://mtf-sat.synvinkel.org/timeseries/{name}?startDate=2018-06-01&endDate=201
 
 ### season
 
-To only include images taken during a certain season you can provide `spring`,`summer`,`fall` or `winter` for the `season` query parameter. Season is defined in a very much northensperocentric manner.
+To only include images taken during a certain season you can provide `spring`,`summer`,`fall` or `winter` for the `season` query parameter. Season is defined in a very much northen-hemispherocentric manner.
 
 ```
 https://mtf-sat.synvinkel.org/timeseries/{name}?season=winter
