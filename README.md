@@ -70,6 +70,12 @@ Filtering by a specific date range is done by providing `startDate` and `endDate
 https://mtf-sat.synvinkel.org/timeseries/{name}?startDate=2018-06-01&endDate=2018-07-23
 ```
 
+### buffer
+
+Use `buffer` to set a custom buffer around the requested point. The default buffer is 2000 meters. Buffer size greatly affects the processing time for both the timeseries and the images you get.
+
+Setting the buffer to 0 will get the time series for the pixel at that location. The image url will be omitted from the result.
+
 ### season
 
 To only include images taken during a certain season you can provide `spring`,`summer`,`fall` or `winter` for the `season` query parameter. Season is defined in a very much northen-hemispherocentric manner.
