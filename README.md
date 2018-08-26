@@ -34,6 +34,10 @@ Using either of the endpoints and options described below will return a JSON lik
 
 Requests that fail for one reason or another will respond with an appropriate HTTP error code, and a hopefully helpful error message.
 
+## API-key
+
+All of the `/timeseries` request must include an `apikey` query parameter. `/timeseries?lng=106.18&lat=53.98&apikey={Your API-key here}`
+
 ## By coordinates
 
 A timeseries for a specific location can be requested by adding the `lng` and `lat` query parameters:
