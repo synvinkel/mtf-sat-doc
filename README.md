@@ -84,7 +84,20 @@ The url provided in the timeseries result will process and return the requested 
 
 ## Options
 
-You can set `visualize` to either `rgb` or `falsecolor`... **TODO**: better wording / expand / explain
+By default the image will be visualized as RGB truecolor. If you want to you can choose arbitrary band combinations by providing a comma separated string of bands as a `bands` parameter.
+
+Some suggested band combinations to try out:
+
+* **Natural Colors:** B4,B3,B2
+* **False color Infrared:** B8,B4,B3
+* **False color Urban:** B12,B11,B4
+* **Agriculture:** B11,B8,B2
+* **Atmospheric penetration:** B12,B11,B8a
+* **Healthy vegetation:** B8,B11,B2
+* **Land/Water:** B8,B11,B4
+* **Natural Colors with Atmospheric Removal:** B12,B8,B3
+* **Shortwave Infrared:** B12,B8,B4
+* **Vegetation Analysis:** B11,B8,B4
 
 ```
 https://mtf-sat.synvinkel.org/image/18.30005/57.63845/20180613T101019_20180613T101424_T33VXD.png
