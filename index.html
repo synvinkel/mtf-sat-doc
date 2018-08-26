@@ -11,11 +11,16 @@
             margin: 0;
             padding: 0;
         }
+
         header {
             height: 100vh;
             width: 100%;
             background: #123;
+            display: grid;
+            justify-content: center;
+            align-items: center;
         }
+
         main {
             margin: 40px auto;
             max-width: 650px;
@@ -23,7 +28,7 @@
             font-size: 18px;
             color: #444;
             padding: 0 10px;
-       }
+        }
 
         h1,
         h2,
@@ -35,7 +40,8 @@
             max-width: 100%;
         }
 
-        pre, code {
+        pre,
+        code {
             font-size: 0.7rem;
             padding: 4px;
             max-width: 100%;
@@ -48,6 +54,15 @@
 <body>
 
     <header>
+        <svg width="300" height="300">
+            <g>
+                <circle cx="150" cy="150" r="100" stroke="none" stroke-width="1" fill="#113"></circle>
+                <g class="sat" transform="translate(150, 150) rotate(90)" transform=>
+                    <circle cx="110" cy="0" r="1" fill="white"></circle>
+                </g>
+                <circle></circle>
+            </g>
+        </svg>
 
     </header>
     <main>
@@ -59,15 +74,26 @@
 
         const converter = new showdown.Converter()
 
-        console.log('showdown', showdown)
-
         const getReadme = async () => {
             const readme = await (await fetch('./README.md')).text()
-            console.log(converter.makeHtml(readme))
             document.querySelector('main').innerHTML = converter.makeHtml(readme)
         }
 
         getReadme()
+
+        const sat = document.querySelector('.sat')
+
+        let angle = 0.0
+
+        setInterval(() => angle += 0.5, 16.67)
+
+        function draw(timestamp) {
+            // angle += 0.5
+            sat.setAttribute('transform', `translate(150,150) rotate(${angle})`)
+            window.requestAnimationFrame(draw)
+        }
+
+        window.requestAnimationFrame(draw)
     </script>
 </body>
 
