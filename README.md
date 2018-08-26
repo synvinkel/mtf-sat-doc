@@ -15,34 +15,24 @@ Using either of the endpoints and options described below will return a JSON lik
 
 ```
 {
-    success: true,
-    data:{
-        location: {"lng": 0, "lat": 0},
-        images: [
-            {
-                bands: {
-                        B1: 3645,
-                        B2: 4324,
-                        etc...
-                    },
-                cloudcover: 30.8,
-                date: "2018-06-05",
-                url: "https://---imageurl---",
-            },
-            ...etc
-        ]
-    }
+    location: {"lng": 0, "lat": 0},
+    images: [
+        {
+            bands: {
+                    B1: 3645,
+                    B2: 4324,
+                    etc...
+                },
+            cloudcover: 30.8,
+            date: "2018-06-05",
+            url: "https://---imageurl---",
+        },
+        ...etc
+    ]
 }
 ```
 
-Requests that fail for one reason or another will return
-
-```
-{
-    success: false,
-    message: "A friendly and hopefully helpful error message"
-}
-```
+Requests that fail for one reason or another will respond with an appropriate HTTP error code, and a hopefully helpful error message.
 
 ## By coordinates
 
