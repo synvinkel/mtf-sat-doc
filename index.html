@@ -7,6 +7,16 @@
     <title>MTF Satellite API Documentation</title>
     <style type="text/css">
         body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            height: 100vh;
+            width: 100%;
+            background: #123;
+        }
+        main {
             margin: 40px auto;
             max-width: 650px;
             line-height: 1.6;
@@ -25,14 +35,23 @@
             max-width: 100%;
         }
 
-        code {
+        pre {
+            padding: 4px;
             max-width: 100%;
             background: rgba(170, 162, 135, 0.323);
+            overflow-x: auto;
         }
     </style>
 </head>
 
 <body>
+
+    <header>
+
+    </header>
+    <main>
+
+    </main>
 
     <script src="https://cdn.rawgit.com/showdownjs/showdown/1.8.6/dist/showdown.min.js"></script>
     <script>
@@ -44,7 +63,7 @@
         const getReadme = async () => {
             const readme = await (await fetch('./README.md')).text()
             console.log(converter.makeHtml(readme))
-            document.querySelector('body').innerHTML = converter.makeHtml(readme)
+            document.querySelector('main').innerHTML = converter.makeHtml(readme)
         }
 
         getReadme()
