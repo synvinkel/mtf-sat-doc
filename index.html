@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTF Satellite API Documentation</title>
+    <style type="text/css">
+        body {
+            margin: 40px auto;
+            max-width: 650px;
+            line-height: 1.6;
+            font-size: 18px;
+            color: #444;
+            padding: 0 10px;
+       }
+
+        h1,
+        h2,
+        h3 {
+            line-height: 1.2
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        code {
+            max-width: 100%;
+            background: rgba(170, 162, 135, 0.323);
+        }
+    </style>
+</head>
+
+<body>
+
+    <script src="https://cdn.rawgit.com/showdownjs/showdown/1.8.6/dist/showdown.min.js"></script>
+    <script>
+
+        const converter = new showdown.Converter()
+
+        console.log('showdown', showdown)
+
+        const getReadme = async () => {
+            const readme = await (await fetch('./README.md')).text()
+            console.log(converter.makeHtml(readme))
+            document.querySelector('body').innerHTML = converter.makeHtml(readme)
+        }
+
+        getReadme()
+    </script>
+</body>
+
+</html>
