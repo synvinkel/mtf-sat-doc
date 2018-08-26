@@ -100,12 +100,12 @@ Some suggested band combinations to try out:
 * **Vegetation Analysis:** B11,B8,B4
 
 ```
-https://mtf-sat.synvinkel.org/image/18.30005/57.63845/20180613T101019_20180613T101424_T33VXD.png
+https://mtf-sat.synvinkel.org/image/18.30005/57.63845/20180613T101019_20180613T101424_T33VXD-7d0.png
 ```
-![rgb visualization](images/20180628T101031_20180628T101358_T33VXD.png)
+![rgb visualization](images/20180628T101031_20180628T101358_T33VXD-7d0.png)
 ```
-https://mtf-sat.synvinkel.org/image/18.30005/57.63845/20180613T101019_20180613T101424_T33VXD.png?visualize=falsecolor
+https://mtf-sat.synvinkel.org/image/18.30005/57.63845/20180613T101019_20180613T101424_T33VXD-7d0.png?bands=B8,B4,B3
 ```
-![false color visualization](images/20180628T101031_20180628T101358_T33VXD_falsecolor.png)
+![false color visualization](images/20180628T101031_20180628T101358_T33VXD-7d0_falsecolor.png)
 
 
