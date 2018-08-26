@@ -36,7 +36,12 @@ Requests that fail for one reason or another will respond with an appropriate HT
 
 ## API-key
 
-All of the `/timeseries` request must include an `apikey` query parameter. `/timeseries?lng=106.18&lat=53.98&apikey={Your API-key here}`
+All of the `/timeseries` request must include an `apikey` query parameter. 
+
+Example:
+```
+/timeseries?lng=106.18&lat=53.98&apikey={Your API-key here}
+```
 
 ## By coordinates
 
