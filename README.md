@@ -15,9 +15,18 @@ The base URL for the API is
 
 <a href="https://mtf-sat.synvinkel.org" target="_blank">https://mtf-sat.synvinkel.org</a>
 
-## Response
+## API-key
 
-Using either of the endpoints and options described below will return a JSON like this:
+All of the `/timeseries` request must include an `apikey` query parameter. 
+
+Example:
+```
+/timeseries/london?apikey={Your API-key here}
+```
+
+## Timeseries
+
+Getting timeseries data is done by providing a location, either by coordinates or place name, to the `/timeseries` endpoint. It returns a JSON like this:
 
 ```
 {
@@ -40,24 +49,16 @@ Using either of the endpoints and options described below will return a JSON lik
 
 Requests that fail for one reason or another will respond with an appropriate HTTP error code, and a hopefully helpful error message.
 
-## API-key
 
-All of the `/timeseries` request must include an `apikey` query parameter. 
-
-Example:
-```
-/timeseries?lng=106.18&lat=53.98&apikey={Your API-key here}
-```
-
-## By coordinates
+### By coordinates
 
 A timeseries for a specific location can be requested by adding the `lng` and `lat` query parameters:
 
 ```
-https://mtf-sat.synvinkel.org/timeseries?lng=106.18&lat=53.98
+/timeseries?lng=106.18&lat=53.98
 ```
 
-## By placename
+### By placename
 
 Requesting by placename can be done with `/timeseries/{name}`
 
@@ -67,7 +68,9 @@ https://mtf-sat.synvinkel.org/timeseries/{name}
 
 ## Options
 
-Options can be appended to the endpoints described above to narrow down the result. This is a great way to make your request process faster.
+The following options can be appended to the timeseries endpoint to narrow down search.
+
+Doing this a great way to make your request process faster, since only the data you are interested in needs processing.
 
 ### maxCloudCover
 
