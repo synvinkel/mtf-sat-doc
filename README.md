@@ -68,7 +68,7 @@ https://mtf-sat.synvinkel.org/timeseries/{name}
 
 ## Options
 
-The following options can be appended to the timeseries endpoint to narrow down search.
+The following options can be appended  `/timeseries` to narrow down search.
 
 Doing this a great way to make your request process faster, since only the data you are interested in needs processing.
 
@@ -77,7 +77,7 @@ Doing this a great way to make your request process faster, since only the data 
 Use `maxCloudCover` to filter by cloud cover percentage. Must be a number between 0 and 100.
 
 ```
-https://mtf-sat.synvinkel.org/timeseries/{name}?maxCloudCover=50
+/timeseries/{name}?maxCloudCover=50
 ```
 
 ### fromDate, startDate
@@ -85,7 +85,7 @@ https://mtf-sat.synvinkel.org/timeseries/{name}?maxCloudCover=50
 Filtering by a specific date range is done by providing `startDate` and `endDate` in YYYY-MM-DD format (e.g. 2018-01-31) 
 
 ```
-https://mtf-sat.synvinkel.org/timeseries/{name}?startDate=2018-06-01&endDate=2018-07-23
+/timeseries/{name}?startDate=2018-06-01&endDate=2018-07-23
 ```
 
 ### buffer
@@ -94,12 +94,16 @@ Use `buffer` to set a custom buffer around the requested point. The default buff
 
 Setting the buffer to 0 will get the time series for the pixel at that location. The image url will be omitted from the result.
 
+```
+/timeseries/{name}?buffer=100
+```
+
 ### season
 
 To only include images taken during a certain season you can provide `spring`,`summer`,`fall` or `winter` for the `season` query parameter. Season is defined in a very much northen-hemispherocentric manner.
 
 ```
-https://mtf-sat.synvinkel.org/timeseries/{name}?season=winter
+/timeseries/{name}?season=winter
 ```
 
 # Images
@@ -123,13 +127,21 @@ Some suggested band combinations to try out:
 * **Shortwave Infrared:** B12,B8,B4
 * **Vegetation Analysis:** B11,B8,B4
 
+### Example
+
+Default RGB visualization (natural colors):
 ```
-https://mtf-sat.synvinkel.org/image/18.30005/57.63845/20180421T100029_20180421T100427_T33VXD-7d0.png
+/image/18.30005/57.63845/20180421T100029_20180421T100427_T33VXD-7d0.png
 ```
+
 ![rgb visualization](images/20180421T100029_20180421T100427_T33VXD-7d0.png)
+
+False color near infra-read (NIR). Putting B8 into the red channel will highlight vegetation, since vegetation has high reflectance in the NIR part of the spectrum
+
 ```
-https://mtf-sat.synvinkel.org/image/18.30005/57.63845/20180421T100029_20180421T100427_T33VXD-7d0.png?bands=B8,B4,B3
+/image/18.30005/57.63845/20180421T100029_20180421T100427_T33VXD-7d0.png?bands=B8,B4,B3
 ```
+
 ![false color visualization](images/20180421T100029_20180421T100427_T33VXD-7d0_falsecolor.png)
 
 
