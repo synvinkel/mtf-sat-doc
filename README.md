@@ -3,11 +3,15 @@
 
 This documentation describes how to use the satellite data API designed for MTF.
 
-TODO: describe the data source
+The API accepts a location as input, either latitude/longitude coordinates or a place name, and returns a time series of data recorded by the satellite. The response includes a url for downloading the image that the data represent. That way the user is free to either use the data values directly, or do something interesting with the imagery itself.
+
+The satellite data that the API uses comes from the Sentinel 2 platform, which is part of the EU Copernicus project. The Sentinel 2 imagery has a 10 meter spatial resolution (i.e. one pixel covers a 10x10m patch of the earth surface). New images are captured by the satellite every two to five days for any given place on earth (the closer to the poles, the shorter the revisit time).
+
+Sentinel 2 is an optical satellite that recors different parts of the electromagnetic spectrum into differnt bands. The values of these bands can then be combined in different ways to highlight certain things on the earth surface, such as presence/absence of vegetation, seasonal variations, etc.
 
 # API
 
-The API is available at `https://mtf-sat.synvinkel.org/timeseries/`.
+The base URL for the API is <a href="https://mtf-sat.synvinkel.org" target="_blank">https://mtf-sat.synvinkel.org</a>
 
 ## Response
 
