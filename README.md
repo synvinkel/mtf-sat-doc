@@ -120,7 +120,7 @@ Some suggested band combinations to try out:
 * **False color Infrared:** B8,B4,B3
 * **False color Urban:** B12,B11,B4
 * **Agriculture:** B11,B8,B2
-* **Atmospheric penetration:** B12,B11,B8a
+* **Atmospheric penetration:** B12,B11,B8A
 * **Healthy vegetation:** B8,B11,B2
 * **Land/Water:** B8,B11,B4
 * **Natural Colors with Atmospheric Removal:** B12,B8,B3
