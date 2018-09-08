@@ -63,7 +63,7 @@ A timeseries for a specific location can be requested by adding the `lng` and `l
 Requesting by placename can be done with `/timeseries/{name}`
 
 ```
-https://mtf-sat.synvinkel.org/timeseries/{name}
+/timeseries/{name}
 ```
 
 ## Options
