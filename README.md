@@ -107,6 +107,14 @@ To only include images taken during a certain season you can provide `spring`,`s
 /timeseries/{name}?season=winter
 ```
 
+### filetype
+
+To get URLs you prefer geotiff before a png use `filetype=tif`. Each URL in the timeseries will now link you to a zipfile with each band as a separate geotiff.
+
+```
+/timeseries/{name}?filetype=tif
+```
+
 # Images
 
 The url provided in the timeseries result will process and return the requested image as a png. 
