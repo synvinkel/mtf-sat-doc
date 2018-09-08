@@ -40,6 +40,7 @@ Getting timeseries data is done by providing a location, either by coordinates o
                 },
             cloudcover: 30.8,
             date: "2018-06-05",
+            time: 1484388826463  // exact time of catpure, epoch time in milliseconds
             url: "https://---imageurl---",
         },
         ...etc
